@@ -4,7 +4,7 @@ require('dotenv').config();
 const connectDB = async () => {
   try {
     await mongoose.connect(
-      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.pm4ek.gcp.mongodb.net/CommentsDB?retryWrites=true&w=majority`,
+      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@rohan.7ulch.mongodb.net/rohan?retryWrites=true&w=majority`,
       {
         useNewUrlParser: true,
         useCreateIndex: true,
