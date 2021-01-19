@@ -14,8 +14,6 @@ export const Aside = (e) => {
     document.querySelector('.nav-toggler').classList.toggle('open');
     document.querySelector('.aside').classList.toggle('open');
 
-    console.log(document.querySelector('#switcher'));
-
     if (window.innerWidth <= 500) {
       document.querySelector('#switcher').classList.toggle('hidden');
     }
