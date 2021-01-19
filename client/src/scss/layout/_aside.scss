@@ -1,0 +1,157 @@
+.aside {
+  width: 27rem;
+  background-color: $background-dark-color;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  overflow-y: auto;
+  border-right: 1px solid $border-light-color;
+  padding: 3rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  user-select: none;
+
+  @include respond(tab-land) {
+    left: -27rem;
+  }
+
+  &.open {
+    left: 0;
+  }
+
+  & .logo {
+    padding: 3rem 0;
+
+    & a {
+      font-size: 4rem;
+      color: $primary-text-color;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      padding: 0 1rem;
+      line-height: 5rem;
+    }
+
+    & a::before {
+      content: '';
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    & a::after {
+      content: '';
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  & .copyright-text {
+    font-size: $default-font-size;
+  }
+}
+
+.aside .nav-toggler {
+  height: 4rem;
+  width: 4.5rem;
+  border: 1px solid $border-light-color;
+  cursor: pointer;
+  position: fixed;
+  left: 30rem;
+  top: 2rem;
+  z-index: 11;
+  border-radius: 5px;
+  background-color: $background-color;
+  display: none;
+  align-items: center;
+  -ms-flex-align: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  @include respond(tab-land) {
+    display: -ms-flexbox;
+    display: flex;
+    left: 2rem;
+  }
+
+  &.open {
+    @include respond(tab-land) {
+      left: 30rem;
+    }
+
+    & span {
+      background-color: transparent;
+    }
+  }
+  & span {
+    height: 2px;
+    width: 1.8rem;
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.aside .nav-toggler span::before {
+  content: '';
+  height: 1.8px;
+  width: 1.8rem;
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+.aside .nav-toggler.open span::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0;
+}
+.aside .nav-toggler span::after {
+  content: '';
+  height: 2px;
+  width: 1.8rem;
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+.aside .nav-toggler.open span::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 0;
+}
+.aside .nav {
+  list-style: none;
+  margin: 80px 0;
+  padding: 0;
+
+  & li {
+    display: block;
+  }
+  & li a {
+    font-size: $default-font-size;
+    font-weight: 600;
+    color: $primary-text-color;
+    text-decoration: none;
+    line-height: 4.5rem;
+    display: block;
+    border-bottom: 1px solid $border-light-color;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    text-transform: capitalize;
+  }
+
+  & li a:not(.active):hover {
+    padding-left: 0.5rem;
+  }
+  & li a .fa {
+    margin-right: 0.5rem;
+  }
+}

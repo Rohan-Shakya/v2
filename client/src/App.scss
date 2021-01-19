@@ -1,0 +1,27 @@
+/* Font Awesome Icons */
+// @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:500,700,900&display=swap');
+
+@import './scss/abstracts/animation';
+@import './scss/abstracts/variables';
+@import './scss/abstracts/mixins';
+
+@import './scss/base/base';
+@import './scss/base/typography';
+@import './scss/base/utility';
+
+@import './scss/components/button';
+@import './scss/components/themeSwitcher';
+
+@import './scss/layout/aside';
+@import './scss/layout/section';
+
+@import './scss/pages/home';
+@import './scss/pages/about';
+@import './scss/pages/service';
+@import './scss/pages/portfolio';
+@import './scss/pages/blog';
+@import './scss/pages/contact';

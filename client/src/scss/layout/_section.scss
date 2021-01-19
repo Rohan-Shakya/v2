@@ -1,0 +1,71 @@
+.section {
+  background-color: $background-color;
+  min-height: 100vh;
+  display: block;
+  padding: 0 5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  left: 27rem;
+  opacity: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  @include respond(phone) {
+    padding: 0 3rem;
+  }
+
+  @include respond(tab-land) {
+    left: 0;
+  }
+
+  &.open {
+    @include respond(tab-land) {
+      left: 27rem;
+    }
+  }
+
+  & .container {
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+
+    @include respond(tab-land) {
+      padding-top: 7rem;
+    }
+  }
+}
+
+.section-title {
+  @include flex(0, 0, 100%);
+  margin-bottom: 6rem;
+
+  & h2 {
+    font-size: 40px;
+    color: $primary-text-color;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+  }
+  & h2::before {
+    content: '';
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  & h2::after {
+    content: '';
+    height: 4px;
+    width: 30px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+  }
+}

@@ -1,0 +1,18 @@
+.btn {
+  font-size: $default-font-size;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 50rem;
+  padding: 1rem 3rem;
+  color: white;
+  border-radius: 4rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}

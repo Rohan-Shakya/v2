@@ -1,0 +1,72 @@
+@-webkit-keyframes changetext {
+  0% {
+    content: 'Student.';
+  }
+  16.66% {
+    content: 'Technology Lover.';
+  }
+  33.33% {
+    content: 'Programmer.';
+  }
+  50% {
+    content: 'Developer.';
+  }
+  66.66% {
+    content: 'Developer.';
+  }
+  83.32% {
+    content: 'Art Lover.';
+  }
+  100% {
+    content: 'Writer.';
+  }
+}
+
+@keyframes changetext {
+  0% {
+    content: 'Student.';
+  }
+  16.66% {
+    content: 'Technology Lover.';
+  }
+  33.33% {
+    content: 'Programmer.';
+  }
+  50% {
+    content: 'Developer.';
+  }
+  66.66% {
+    content: 'Developer.';
+  }
+  83.32% {
+    content: 'Art Lover.';
+  }
+  100% {
+    content: 'Writer.';
+  }
+}
+
+@-webkit-keyframes showItem {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes showItem {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}

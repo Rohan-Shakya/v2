@@ -1,0 +1,45 @@
+@mixin flex($flex, $grow, $basis) {
+  & {
+    -ms-flex: $flex $grow $basis;
+    flex: $flex $grow $basis;
+    max-width: $basis;
+  }
+}
+
+// MEDIA QUERY MANAGER
+/* 
+0 - 600px;         Phone
+600 - 900px;       Tablet Portrait
+900 - 1200px;      Tablet Landscape 
+[1200 - 1800px;]   is where normal style apply
+1800px +;           Big desktop
+*/
+
+/*
+$breakpoint argument choice:
+- phone
+- tab-port
+- tab-land
+-big-desktop
+*/
+
+// 1em = 16px
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) /* 600px */ {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 48em) /* 768px */ {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) /* 1200px */ {
+      @content;
+    }
+  }
+}

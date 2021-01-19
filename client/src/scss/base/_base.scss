@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /*it forces the inheritance */
+  outline: none;
+  text-decoration: none;
+}
+
+html {
+  // THis defines what 1rem is
+  font-size: 62.5%; // 1rem = 10px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+}

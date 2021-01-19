@@ -1,0 +1,214 @@
+.about .about-content {
+  @include flex(0, 0, 100%);
+
+  & .about-text {
+    @include flex(0, 0, 100%);
+
+    & h3 {
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      color: $primary-text-color;
+    }
+    & p {
+      font-size: $default-font-size;
+      line-height: 2.5rem;
+      color: $primary-text-light-color;
+      margin: 0;
+    }
+  }
+}
+
+.about .about-content .personal-info {
+  @include flex(0, 0, 60%);
+  margin-top: 4rem;
+
+  @include respond(tab-port) {
+    // width <= 768px
+    @include flex(0, 0, 100%);
+  }
+
+  & .info-item {
+    @include flex(0, 0, 50%);
+
+    @include respond(phone) {
+      @include flex(0, 0, 100%);
+    }
+
+    & p {
+      font-weight: 500;
+      padding: 1rem 0;
+      font-size: $default-font-size;
+      color: $primary-text-color;
+      margin: 0;
+      border-bottom: 1px solid $border-light-color;
+
+      @include respond(phone) {
+        padding-left: 2rem;
+      }
+    }
+
+    & span {
+      font-weight: 400;
+      color: $primary-text-light-color;
+      margin-left: 0.4rem;
+      display: inline-block;
+
+      @include respond(tab-land) {
+        // width <= 1200px
+        display: block;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.about .about-content .personal-info .buttons {
+  margin-top: 2rem;
+
+  @include respond(phone) {
+    margin: 2rem auto;
+  }
+
+  & .btn {
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+  }
+}
+
+.about .about-content .skills {
+  @include flex(0, 0, 40%);
+  margin-top: 4rem;
+
+  @include respond(tab-port) {
+    // width <= 768px
+    @include flex(0, 0, 100%);
+  }
+
+  & .skill-item {
+    @include flex(0, 0, 100%);
+    margin-bottom: 2.5rem;
+
+    & h5 {
+      line-height: 4rem;
+      font-weight: 600;
+      font-size: $default-font-size;
+      color: $primary-text-color;
+      text-transform: capitalize;
+      margin: 0;
+    }
+
+    & .progress {
+      background-color: $dark-text-color;
+      height: 0.7rem;
+      border-radius: 0.7rem;
+      /* overflow: hidden; */
+      font-size: $default-font-size;
+      width: 100%;
+      position: relative;
+
+      & .progress-in {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+      }
+    }
+
+    & .skill-percent {
+      line-height: 4rem;
+      position: absolute;
+      right: 0;
+      color: $primary-text-color;
+      top: -4rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.about .about-content .education,
+.about .about-content .experience {
+  @include flex(0, 0, 50%);
+  margin-top: 5rem;
+
+  @include respond(tab-port) {
+    // width <= 768px
+    @include flex(0, 0, 100%);
+  }
+}
+
+.about .about-content .title {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: $primary-text-color;
+}
+
+.about .about-content .timeline-box {
+  @include flex(0, 0, 100%);
+}
+
+.about .about-content .timeline {
+  background-color: $background-color;
+  padding: 3rem 1.5rem;
+  border: 1px solid $border-light-color;
+  border-radius: 1rem;
+  width: 100%;
+  position: relative;
+
+  & .timeline-item {
+    position: relative;
+    padding-left: 3.5rem;
+    padding-bottom: 5rem;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+    &::before {
+      content: '';
+      width: 1px;
+      position: absolute;
+      height: 100%;
+      left: 0.7rem;
+      top: 0;
+    }
+  }
+
+  & .circle-dot {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+  }
+}
+
+.about .about-content .timeline {
+  & .timeline-date {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: -5px;
+    margin-bottom: 1.2rem;
+    color: $primary-text-light-color;
+
+    & .fa {
+      margin-right: 0.5rem;
+    }
+  }
+
+  & .timeline-title {
+    font-weight: 700;
+    font-size: $default-font-size;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    color: $primary-text-color;
+  }
+
+  & .timeline-text {
+    font-size: $default-font-size;
+    line-height: 2.5rem;
+    color: $primary-text-light-color;
+    margin: 0;
+  }
+}

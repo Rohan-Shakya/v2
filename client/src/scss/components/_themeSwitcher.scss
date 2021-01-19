@@ -1,0 +1,142 @@
+.color-switcher {
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  width: 4rem;
+  height: 2.3rem;
+  border: 3px solid $dark-border-light-color;
+  border-radius: 15px;
+  z-index: 100000;
+
+  & .icon {
+    position: absolute;
+    top: -0.7rem;
+    left: -1rem;
+    height: 3rem;
+    width: 3rem;
+    background-color: $dark-border-color;
+    padding: 0.7rem;
+    border-radius: 50%;
+
+    & svg {
+      color: $background-color;
+      font-size: 1.6rem;
+    }
+  }
+
+  &.dark-theme .icon {
+    left: 1.5rem;
+  }
+}
+
+.aside .logo {
+  & a::before {
+    border-top: 4px solid $primary-color;
+    border-left: 4px solid $primary-color;
+  }
+  & a::after {
+    border-bottom: 4px solid $primary-color;
+    border-right: 4px solid $primary-color;
+  }
+}
+.aside .nav li a:hover,
+.contact .contact-info-item .icon svg,
+.blog .blog-item-inner .blog-info .blog-tag a,
+.lightbox .lightbox-controls .prev-item .fa,
+.lightbox .lightbox-controls .next-item .fa,
+.portfolio .portfolio-filter button.active,
+body.dark .portfolio .portfolio-filter button.active,
+.portfolio .portfolio-item .portfolio-info .icon .fa,
+.services .services-item .services-item-inner .icon .fa,
+.about .about-content .about-text h3 span,
+body.dark .aside .nav li a.active,
+body.dark .aside .nav li a:hover,
+.aside .nav li a.active {
+  color: $primary-color;
+}
+.btn,
+.blog .blog-item-inner .blog-img .blog-date,
+.services .services-item .services-item-inner:hover .icon,
+.about .about-content .timeline .timeline-item::before,
+.about .about-content .timeline .circle-dot,
+.about .about-content .skills .skill-item .progress .progress-in,
+.section-title h2::before,
+.section-title h2::after,
+.aside .nav-toggler span,
+.aside .nav-toggler span::before,
+.aside .nav-toggler span::after,
+.home .intro .social-links a {
+  background-color: $primary-color;
+}
+
+.portfolio .portfolio-filter button.active {
+  border-color: $primary-color;
+}
+
+body.dark .section {
+  background-color: $dark-secondary-color;
+}
+body.dark .blog .blog-item-inner,
+body.dark .contact .contact-form .form-item .form-control,
+body.dark .blog .blog-item-inner .blog-info,
+body.dark .services .services-item .services-item-inner,
+body.dark .about .about-content .timeline,
+body.dark .aside .nav-toggler,
+body.dark .aside {
+  background-color: $dark-color;
+}
+body.dark .contact .contact-info-item h4,
+body.dark .blog .blog-item-inner .blog-info .blog-title,
+body.dark .portfolio .portfolio-filter button,
+body.dark .services .services-item .services-item-inner h4,
+body.dark .about .about-content .timeline .timeline-title,
+body.dark .about .about-content h3.title,
+body.dark .about .about-content .skills .skill-item h5,
+body.dark .about .about-content .personal-info .info-item p,
+body.dark .about .about-content .about-text h3,
+body.dark .section-title h2,
+body.dark .home .intro h1,
+body.dark .aside .logo a,
+body.dark .aside .copyright-text,
+body.dark .aside .nav li a {
+  color: $dark-primary-text;
+}
+
+body.dark .contact .contact-form .form-item .form-control,
+body.dark .contact .contact-info-item p,
+body.dark .blog .blog-item-inner .blog-info .blog-tag,
+body.dark blockquote,
+body.dark .blog .blog-item-inner .blog-info .blog-description,
+body.dark .blog .blog-item-inner .blog-info .blog-description p,
+body.dark .services .services-item .services-item-inner p,
+body.dark .about .about-content .timeline .timeline-text,
+body.dark .about .about-content .timeline .timeline-date,
+body.dark .about .about-content .skills .skill-item .skill-percent,
+body.dark .about .about-content .personal-info .info-item p span,
+body.dark .about .about-content .about-text p,
+body.dark .home .intro p {
+  color: $dark-text-color;
+}
+
+body.dark .aside,
+body.dark .contact .contact-form .form-item .form-control,
+body.dark .blog .blog-item-inner,
+body.dark .portfolio .portfolio-item-inner,
+body.dark .services .services-item .services-item-inner,
+body.dark .about .about-content .timeline,
+body.dark .about .about-content .personal-info .info-item p,
+body.dark .aside .nav li a {
+  border-color: $dark-border-color;
+}
+
+body.dark .aside .nav-toggler {
+  border: 1px solid $dark-border-light-color;
+}
+
+body.dark .shadow-dark {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+body.dark blockquote {
+  background-color: #403b3b7d;
+}
