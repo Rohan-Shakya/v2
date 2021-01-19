@@ -16,7 +16,9 @@ const State = (props) => {
 
   const getInfo = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/user');
+      const res = await axios.get(
+        'https://rohan-personal.herokuapp.com/api/user'
+      );
       dispatch({
         type: GET_INFO,
         payload: res.data,
@@ -38,7 +40,7 @@ const State = (props) => {
 
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/contacts',
+        'https://rohan-personal.herokuapp.com/api/contacts',
         info,
         config
       );
